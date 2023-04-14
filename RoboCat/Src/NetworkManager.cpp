@@ -3,7 +3,8 @@
 NetworkManager::NetworkManager() :
 	mBytesSentThisFrame( 0 ),
 	mDropPacketChance( 0.3f ),
-	mSimulatedLatency( 10.f )
+	mSimulatedLatency( 10.f ),
+	mDeliveryNotifMan(true, true)
 {
 }
 
@@ -43,7 +44,7 @@ void NetworkManager::ProcessIncomingPackets()
 	ProcessQueuedPackets();
 
 	UpdateBytesSentLastFrame();
-
+	mDeliveryNotifMan.ProcessTimedOutPackets();
 }
 
 void NetworkManager::ReadIncomingPacketsIntoQueue()

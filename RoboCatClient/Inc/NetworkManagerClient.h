@@ -60,5 +60,6 @@ private:
 
 	WeightedTimedMovingAverage	mAvgRoundTripTime;
 	float						mLastRoundTripTime;
-
+	
+	//DeliveryNotificationManager mDeliveryNotifMan;
 };

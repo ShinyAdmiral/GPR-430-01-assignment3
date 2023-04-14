@@ -53,6 +53,8 @@ private:
 	float			mTimeOfLastSatePacket;
 	float			mTimeBetweenStatePackets;
 	float			mClientDisconnectTimeout;
+
+	//DeliveryNotificationManager mDeliveryNotifMan;
 };
 
 

@@ -36,6 +36,9 @@ protected:
 
 	IntToGameObjectMap		mNetworkIdToGameObjectMap;
 
+	//declare notification manager
+	DeliveryNotificationManager mDeliveryNotifMan;
+
 private:
 
 	class ReceivedPacket
